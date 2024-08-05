@@ -27,10 +27,6 @@ app.get("*", (req, res) => {
 });
 
 console.log("Current directory:", process.cwd());
-console.log(
-  "Expected backend entry point:",
-  require("path").resolve(__dirname, "backend/index.js")
-);
 
 server.listen(PORT, () => {
   connectToMongoDB();
