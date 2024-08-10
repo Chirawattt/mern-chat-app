@@ -16,14 +16,28 @@ const Conversation = ({ conversation, emoji, lastIndex }) => {
         onClick={() => setSelectedConversation(conversation)}
       >
         <div className={`avatar ${isOnline ? "online" : ""}`}>
-          <div className="w-12 rounded-full">
+          <div
+            className={`w-12 rounded-full ${
+              isOnline ? "opacity-100" : "opacity-15"
+            }`}
+          >
             <img src={conversation.profilePic} alt="user avatar" />
           </div>
         </div>
         <div className="flex flex-col flex-1">
           <div className="flex justify-between">
-            <p className="font-bold text-gray-200">{conversation.fullName}</p>
-            <span className="text-xl">{emoji}</span>
+            <p
+              className={`font-bold ${
+                isOnline ? "text-gray-200" : "opacity-15"
+              }`}
+            >
+              {conversation.fullName}
+            </p>
+            <span
+              className={`text-xl ${isOnline ? "opacity-100" : "opacity-15"}`}
+            >
+              {emoji}
+            </span>
           </div>
         </div>
       </div>
