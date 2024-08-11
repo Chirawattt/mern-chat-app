@@ -1,6 +1,7 @@
 import Sidebar from "../../components/sidebar/Sidebar";
 import MessageContainer from "../../components/message/MessageContainer";
 import Profile from "../../components/profile/Profile";
+import Profile from "../../components/profile/Profile";
 
 const Home = () => {
   return (
